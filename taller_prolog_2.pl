@@ -16,3 +16,9 @@ fibonacci(N,R):-
     fibonacci(N1,R1),
     fibonacci(N2,R2),
     R is R1 + R2.
+
+mcd(X,0,X).
+mcd(X,Y,M):-
+    X1 is X mod Y,
+    mcd(Y, X1, M).
+    
